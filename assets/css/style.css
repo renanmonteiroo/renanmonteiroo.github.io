@@ -1,0 +1,387 @@
+/* Reset básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+/* Estilos gerais */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #343a40 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.navbar .nav-link:hover {
+    color: #007bff !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+}
+
+/* Header */
+.header {
+    background-color: var(--section-bg);
+    padding: 7rem 0;
+}
+
+.header .content {
+    text-align: center;
+}
+
+.header .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.header .subtitle {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.header .buttons .btn {
+    margin: 0 0.5rem;
+}
+
+.header .socials {
+    margin-top: 2rem;
+}
+
+.header .social-item {
+    color: var(--body-color);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.header .social-item:hover {
+    color: var(--primary);
+}
+
+.header .img-holder img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Section */
+#about {
+    background-color: var(--body-bg);
+}
+
+#about .img-thumbnail {
+    border: none;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Services Section */
+#service {
+    background-color: var(--section-bg);
+}
+
+#service .custom-card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#service .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+#service .custom-card .icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+.progress {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.progress-bar {
+    background-color: var(--primary);
+}
+
+/* Hire Me Section */
+.bg-gradient {
+    background: var(--gradient);
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+    background-color: var(--body-bg);
+}
+
+#contact .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#contact .form {
+    flex: 1;
+    padding: 2rem;
+}
+
+#contact .contact-infos {
+    flex: 1;
+    padding: 2rem;
+}
+
+#contact .contact-infos .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#contact .contact-infos .item i {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-right: 1rem;
+}
+
+#contact #map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* Page Footer */
+.page-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.page-footer a {
+    color: var(--footer-color);
+    text-decoration: none;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .header .title {
+        font-size: 2.5rem;
+    }
+
+    .header .subtitle {
+        font-size: 1.2rem;
+    }
+
+    #contact .contact {
+        flex-direction: column;
+    }
+}
+
+.two-colors-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.two-colors-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.two-colors-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.two-colors-btn i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.two-colors-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.two-colors-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*------------------------------------
+   Estilos para Novas Funcionalidades
+------------------------------------*/
+
+/* 1. Animações de Scroll */
+.custom-card, .progress, .contact .form, .contact .contact-infos, .img-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.custom-card.visible, .progress.visible, .contact .form.visible, .contact .contact-infos.visible, .img-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adiciona um atraso para os cards de serviço para um efeito escalonado */
+.custom-card:nth-child(2) { transition-delay: 0.1s; }
+.custom-card:nth-child(3) { transition-delay: 0.2s; }
+.custom-card:nth-child(4) { transition-delay: 0.3s; }
+.img-wrapper:nth-child(2) { transition-delay: 0.1s; }
+.img-wrapper:nth-child(3) { transition-delay: 0.2s; }
+
+/* 2. Botão Voltar ao Topo */
+.btn-flutuante {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-flutuante.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-flutuante:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* 3. Efeito de Digitação */
+#typing-effect {
+    border-right: 2px solid var(--primary);
+    animation: blink-caret .75s step-end infinite;
+    white-space: nowrap;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(0, 123, 255, 0.75); }
+}
+
+/* 4. Filtros do Portfólio */
+#portfolio-filters button {
+    margin: 0 5px;
+    background-color: #6c757d;
+    border-color: var(--secondary);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#portfolio-filters button:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+#portfolio-filters button.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* 5. Dropdown de Idioma */
+.navbar-nav .dropdown-menu {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+/* Estilos para o Modal de Detalhes do Projeto */
+#projectDetailModal .modal-content {
+    background-color: var(--card-bg);
+    color: var(--body-color);
+}
+
+#projectDetailModal .modal-header {
+    border-bottom-color: var(--card-border);
+}
+
+#projectDetailModal .modal-footer {
+    border-top-color: var(--card-border);
+}
+
+#projectDetailModal .modal-title {
+    color: var(--primary);
+}
+
+#projectDetailModal .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+#projectDetailModal .btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+}

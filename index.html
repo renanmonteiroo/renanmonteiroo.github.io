@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -7,10 +7,12 @@
     <meta name="description" content="portfólio  Page">
     <meta name="author" content="Renan Monteiro">
     <link rel="icon" type="image/png" href="assets/imgs/thumb.png">
+
     <title>Renan Monteiro</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/steller.css">
 
 </head>
@@ -20,7 +22,6 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <!-- <a class="navbar-brand" href="#"><img src="assets/imgs/cafe.png" alt=""></a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,25 +30,34 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" data-key="nav_home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre</a>
+                        <a class="nav-link" href="#about" data-key="nav_about">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Serviços</a>
+                        <a class="nav-link" href="#service" data-key="nav_services">Serviços</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Depoimentos</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contato</a>
+                        <a class="nav-link" href="#portfolio" data-key="nav_portfolio">Portfólio</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="- btn btn-primary rounded ml-4"
-                        href="https://wa.me/5581996230817?text=Ol%C3%A1%2C+peguei+seu+contato+no+site+do+seu+portfólio %21"
-                            target="_blank">Fale Comigo</a>
-                    </li> -->
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-key="nav_contact">Contato</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ti-world"></i> Idioma
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('pt-br')">Português (BR)</a>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English (US)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+    <a href="#" class="nav-link two-colors-btn" id="theme-toggle">
+        <i class="ti-moon"></i>
+    </a>
+</li>
                 </ul>
             </div>
         </div>
@@ -58,23 +68,18 @@
     <header class="header" id="home">
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">Olá, eu sou</h6>
+                <h6 class="subtitle" data-key="header_greeting">Prazer, sou </h6>
                 <h6 class="title">Renan Monteiro</h6>
-                <p>Desenvolvedor back end Java</p>
+                <p><span id="typing-effect"></span></p>
 
                 <div class="buttons pt-3">
                     <a target="_blank"
-                    href="https://wa.me/5581996230817?text=Ol%C3%A1%2C+peguei+seu+contato+no+site+do+seu+portfólio %21"
-                        class="btn btn-primary rounded">ENTRE EM CONTATO!</a>
-                    
+                        href="https://wa.me/5581996230817?text=Ol%C3%A1%2C+peguei+seu+contato+no+site+do+seu+portfólio %21"
+                        class="btn btn-primary rounded" data-key="header_contact_btn">ENTRE EM CONTATO!</a>
                 </div>
 
                 <div class="socials mt-4">
-                    <!-- <a class="social-item" href="https://curso.programacaoweb.com.br"><i class="ti-world"></i></a>                     -->
                     <a class="social-item" href="https://www.instagram.com/renan.monteirooo/"><i class="ti-instagram"></i></a>
-                    <a class="social-item"
-                        href="https://call.whatsapp.com/video/BscbO6gNQBubqKQgaZkmno"><i
-                            class="ti-mobile"></i></a>
                     <a class="social-item" href="mailto:renan.monteiro01@outlook.com"><i class="ti-email"></i></a>
                     <a class="social-item" href="https://github.com/renanmonteiroo"><i class="ti-github"></i></a>
                     <a class="social-item" href="https://trello.com/u/renanmonteiro01/"><i class="ti-trello"></i></a>
@@ -111,16 +116,13 @@
                     <img src="assets/imgs/apresentacao.webp" alt="" class="img-thumbnail mb-4">
                 </div>
                 <div class="pl-md-4 col-md-9">
-                    <h6 class="title">Prazer, Renan Monteiro</h6>
-                    <p class="subtitle">Desenvolvedor de software</p>
-                    <p>Apaixonado por tecnologia</p>
-                    <p>Formado em Ciências da computação pela UNIFG e pós graduado (2019) em Teste e Qualidade de Software pela UNINASSAU (2004)</p>
-                    <p>Este site foi criado com objetivo educacional de aprender como criar seu primeiro site de
-                        portfólio  hospedando no githubpages.</p>
-                    <!-- <p>No entanto, como você chegou até aqui e está lendo este parágrafo vou deixar logo aqui abaixo um
-                        link de um vídeo que conta um pouquinho sobre minha história como programador...</p>
-                    <a href="https://youtu.be/L93rsq4vu9A" target="_blank" class="btn btn-primary rounded mt-3">CONHEÇA
-                        MINHA HISTÓRIA</a> -->
+                    <h6 class="title" data-key="about_title">Prazer, Renan Monteiro</h6>
+                    <p class="subtitle" data-key="about_subtitle">Desenvolvedor de software</p>
+                    <p data-key="about_p1">Sou apaixonado por tecnologia e por tudo o que envolve construção de soluções inteligentes. Desde muito jovem tive contato com computadores e, ao longo dos anos, transformei essa curiosidade em profissão.</p>
+                    <p data-key="about_p2">Sou formado em Ciências da Computação pela UNIFG e possuo pós-graduação em Teste e Qualidade de Software pela UNINASSAU, concluída em 2019. Minha trajetória acadêmica e profissional me proporcionou experiência em análise, desenvolvimento, testes e manutenção de sistemas, sempre buscando criar aplicações estáveis, eficientes e de fácil uso.</p>
+                    <p data-key="about_p3">Ao longo da carreira, trabalhei com diversas ferramentas, tecnologias e metodologias, o que me fez desenvolver uma visão ampla sobre o ciclo de vida de software e sobre as boas práticas de desenvolvimento. Gosto de aprender continuamente e estou sempre explorando novas soluções, frameworks, linguagens e tendências do mercado.</p>
+                    <p data-key="about_p3">Este site foi criado com finalidade educacional, como parte do meu processo de estudo e aprimoramento. Aqui compartilho meu primeiro portfólio pessoal, hospedado no GitHub Pages, onde também pretendo divulgar projetos, experimentos, códigos e conteúdos relacionados ao universo da programação.</p>
+                    <p data-key="about_p3">Fique à vontade para navegar, conhecer meu trabalho e acompanhar minha evolução.</p>
                 </div>
             </div>
         </div>
@@ -129,11 +131,9 @@
     <!-- Service section -->
     <section id="service" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Serviços</h6>
-            <h6 class="section-title mb-4">O que eu faço</h6>
-            <p class="mb-5 pb-4">Foco em desenvovimento back-end, microserviços e aplicações web.
-              <br>3 anos de experiência utilizando as tecnologias Java, Spring Boot, JSP, JSF 
-            <br>Bacndo de dados MySql, Postgresql,Oracle</p>
+            <h6 class="subtitle" data-key="services_subtitle">Serviços</h6>
+            <h6 class="section-title mb-4" data-key="services_title">O que eu faço</h6>
+            <p class="mb-5 pb-4" data-key="services_desc">Foco em desenvolvimento back-end, microserviços e aplicações web.<br>3 anos de experiência utilizando as tecnologias Java, Spring Boot, JSP, JSF <br>Banco de dados MySql, Postgresql, Oracle</p>
 
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-4">
@@ -176,14 +176,12 @@
     <!-- Skills section -->
     <section class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Por que me contratar?</h6>
-            <!-- <p class="mb-5 pb-4">Aqui você deve colocar um pouco das suas habilidades comparando o que você sabe fazer
-                de melhor. É importante abranger as principais sem exagerar muito e sempre ser sincero.</p> -->
+            <h6 class="subtitle" data-key="skills_subtitle">Skills</h6>
+            <h6 class="section-title mb-4" data-key="skills_title">Por que me contratar?</h6>
 
             <div class="row text-left">
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Metodologia Ageis</h6>
+                    <h6 class="mb-3" data-key="skills_agile">Metodologia Ágeis</h6>
                     <div class="progress">
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
@@ -192,6 +190,7 @@
                 <div class="col-sm-6">
                     <h6 class="mb-3">Java</h6>
                     <div class="progress">
+                        <!-- O valor de style="width" será atualizado via JS para refletir a porcentagem -->
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>100%</span></div>
                     </div>
@@ -199,13 +198,15 @@
                 <div class="col-sm-6">
                     <h6 class="mb-3">Spring Boot</h6>
                     <div class="progress">
+                        <!-- O valor de style="width" será atualizado via JS para refletir a porcentagem -->
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>100%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Banco de dados</h6>
+                    <h6 class="mb-3" data-key="skills_db">Banco de dados</h6>
                     <div class="progress">
+                        <!-- O valor de style="width" será atualizado via JS para refletir a porcentagem -->
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 65%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
                     </div>
@@ -213,13 +214,15 @@
                 <div class="col-sm-6">
                     <h6 class="mb-3">Vue JS</h6>
                     <div class="progress">
+                        <!-- O valor de style="width" será atualizado via JS para refletir a porcentagem -->
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 40%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <h6 class="mb-3">Gerenciamento de Projetos</h6>
+                    <h6 class="mb-3" data-key="skills_pm">Gerenciamento de Projetos</h6>
                     <div class="progress">
+                        <!-- O valor de style="width" será atualizado via JS para refletir a porcentagem -->
                         <div class="progress-bar bg-primary" role="progressbar" style="width: 50%;" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
                     </div>
@@ -230,154 +233,56 @@
     <!-- End of Skills sections -->
 
     <!-- Portfolio section -->
-    <!-- <section id="portfolio" class="section">
+    <section id="portfolio" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Veja meus projetos incríveis</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
-                rerum commodi corrupti, temporibus non quam.</p>
+            <h6 class="subtitle" data-key="portfolio_subtitle">Portfólio</h6>
+            <h6 class="section-title mb-4" data-key="portfolio_title">Veja Meus Projetos</h6>
+            <p class="mb-5 pb-4" data-key="portfolio_desc">Aqui estão alguns dos projetos em que trabalhei, demonstrando minhas habilidades em diferentes tecnologias.</p>
 
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-3.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-4.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-5.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-6.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Project Title</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="portfolio-filters" class="mb-4">
+                <button class="btn btn-sm btn-primary active" data-filter="all" data-key="portfolio_filter_all">Todos</button>
+                <button class="btn btn-sm btn-primary" data-filter="backend" data-key="portfolio_filter_backend">Back-end</button>
+                <button class="btn btn-sm btn-primary" data-filter="frontend" data-key="portfolio_filter_frontend">Front-end</button>
             </div>
 
+            <div id="portfolio-grid" class="row">
+                <!-- Projetos serão inseridos aqui via JavaScript -->
+            </div>
         </div>
-    </section> -->
+    </section>
     <!-- End of portfolio section -->
 
-    <!-- Testmonial Section -->
-    <!-- <section id="testmonial" class="section">
+    <!-- Testimonial Section -->
+    <section id="testmonial" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Depoimentos</h6>
-            <h6 class="section-title mb-4">O que meus clientes dizem</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
-                rerum commodi corrupti, temporibus non quam.</p>
-
+            <h6 class="subtitle" data-key="testimonials_subtitle">Depoimentos</h6>
+            <h6 class="section-title mb-4" data-key="testimonials_title">O que meus clientes dizem</h6>
+            <p class="mb-5 pb-4" data-key="testimonials_desc">Confira o feedback de alguns dos meus clientes e admiradores.</p>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <!-- Indicadores serão gerados via JavaScript -->
                 </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-1.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates
-                                    in enim vel amet?</p>
-                                <h1 class="title">Emma Re</h1>
-                                <h1 class="subtitle">Graphic Designer</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-2.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates
-                                    in enim vel amet?</p>
-                                <h1 class="title">James Bert</h1>
-                                <h1 class="subtitle">Web Designer</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-3.jpg" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum voluptates
-                                    in enim vel amet?</p>
-                                <h1 class="title">Michael Abra</h1>
-                                <h1 class="subtitle">Web Developer</h1>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-inner" id="testimonials-carousel-inner">
+                    <!-- Depoimentos serão gerados via JavaScript -->
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- End of testmonial section -->
 
     <!-- Hire me section -->
     <section class="bg-gray p-0 section">
         <div class="container">
-            <div class="card bg-primary">
+            <div class="card bg-gradient">
                 <div class="card-body text-light">
                     <div class="row align-items-center">
                         <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Compartilhe comigo seu projeto incrível</h5>
-                            <!-- <p class="mb-3">Accusantium labore nostrum similique quisquam.</p> -->
+                            <h5 class="mt-3" data-key="hire_me_title">Compartilhe comigo seu projeto incrível</h5>
                         </div>
                         <div class="col-sm-3 text-center text-sm-right">
                             <a href="https://wa.me/5581996230817?text=Ol%C3%A1%2C+peguei+seu+contato+no+site+do+seu+portfólio %21"
-                                target="_blank" class="btn btn-light rounded">Fale Comigo!</a>
+                                target="_blank" class="btn btn-light rounded" data-key="hire_me_btn">Fale Comigo!</a>
                         </div>
                     </div>
                 </div>
@@ -389,48 +294,45 @@
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h6 class="subtitle">Contato</h6>
-            <h6 class="section-title mb-4">Fale Comigo Agora</h6>
-            <!-- <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
-                rerum commodi corrupti, temporibus non quam.</p> -->
+            <h6 class="subtitle" data-key="contact_subtitle">Contato</h6>
+            <h6 class="section-title mb-4" data-key="contact_title">Fale Comigo Agora</h6>
 
             <div class="contact text-left">
                 <div class="form">
-                    <h6 class="subtitle">Disponível 24/7</h6>
-                    <h6 class="section-title mb-4">Mande uma mensagem</h6>
+                    <h6 class="subtitle" data-key="contact_form_subtitle">Disponível 24/7</h6>
+                    <h6 class="section-title mb-4" data-key="contact_form_title">Mande uma mensagem</h6>
                     <form id="meuForm">
                         <div class="form-group">
                             <input type="text" class="form-control" id="nome" aria-describedby="emailHelp"
-                                placeholder="Seu nome" required>
+                                placeholder="Seu nome" required data-key="contact_form_name_placeholder" data-placeholder-key="contact_form_name_placeholder">
                         </div>
                         <div class="form-group">
                             <textarea id="mensagem" name="contact-message" id="" cols="30" rows="5" class="form-control"
-                                placeholder="Menssagem"></textarea>
+                                placeholder="Mensagem" data-key="contact_form_message_placeholder" data-placeholder-key="contact_form_message_placeholder"></textarea>
                         </div>
                         <button onclick="generateLink()" type="submit"
-                            class="btn btn-primary btn-block rounded w-lg">Enviar
-                            Mensagem</button>
+                            class="btn btn-primary btn-block rounded w-lg" data-key="contact_form_send_btn">Enviar Mensagem</button>
                     </form>
                 </div>
                 <div class="contact-infos">
                     <div class="item">
                         <i class="ti-location-pin"></i>
                         <div class="">
-                            <h5>Localização</h5>
-                            <p> Rua i, Barra de Jangada, Jaboatão dos Guararapes</p>
+                            <h5 data-key="contact_info_location">Localização</h5>
+                            <p data-key="contact_info_address"> Rua i, Barra de Jangada, Jaboatão dos Guararapes</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="ti-mobile"></i>
                         <div>
-                            <h5>Telefone</h5>
+                            <h5 data-key="contact_info_phone">Telefone</h5>
                             <p>(81) 99623-0817</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="ti-email"></i>
                         <div class="mb-0">
-                            <h5>Email </h5>
+                            <h5 data-key="contact_info_email">Email </h5>
                             <p>renan.monteiro01@outlook.com</p>
                         </div>
                     </div>
@@ -444,14 +346,44 @@
     </section>
     <!-- End of Contact Section -->
 
+    <!-- Project Details Modal -->
+    <div class="modal fade" id="projectDetailModal" tabindex="-1" role="dialog" aria-labelledby="projectDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-project-image" src="" alt="Project Image" class="img-fluid mb-3">
+                    <p id="modal-project-description"></p>
+                    <p><strong>Tecnologias:</strong> <span id="modal-project-tech"></span></p>
+                    <div class="modal-links mt-3">
+                        <a id="modal-project-demo" href="#" target="_blank" class="btn btn-primary mr-2">Ver Demo</a>
+                        <a id="modal-project-code" href="#" target="_blank" class="btn btn-secondary">Ver Código</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Project Details Modal -->
+
+   
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" id="scroll-to-top" class="btn-flutuante"><i class="ti-arrow-up"></i></a>
+
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <p>Copyright
+                <div class="col-sm-12 ">
+                    <p class="text-center">Copyright &copy;
                         <script>document.write(new Date().getFullYear())</script> &copy; <a target="_blank">Renan Monteiro</a>
-                            <!-- href="https://curso.programacaoweb.com.br"  -->
                             
                     </p>
                 </div>
@@ -480,6 +412,9 @@
     <!-- steller js -->
     <script src="assets/js/steller.js"></script>
 
+    <!-- Script de Funcionalidades Customizadas -->
+    <script src="assets/js/main.js"></script>
+
     <script>
         //WHATSAPP
         const meuForm = document.querySelector('#meuForm');
@@ -489,7 +424,7 @@
             let nome = document.getElementById('nome').value;
             let msg = document.getElementById('mensagem').value;
             let api_whats = `https://wa.me/+5581996230817?text=Oi+meu+nome+é+${nome}+. ${msg}`;
-            window.open(api_whats, "_blank");
+            window.open(api_whats, '_blank');
         });       
     </script>
 
