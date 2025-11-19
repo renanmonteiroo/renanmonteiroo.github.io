@@ -11694,3 +11694,33 @@ pre {
 .section.bg-gray {
   background: white;
 }
+
+/* Garante que o ícone do tema seja sempre visível */
+#theme-toggle i {
+    color: var(--primary) !important;
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone do tema seja sempre visível */
+#theme-toggle i {
+    color: var(--primary) !important;
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone do tema seja sempre visível */
+#theme-toggle i {
+    color: var(--primary) !important;
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone do tema seja sempre visível */
+#theme-toggle i {
+    color: var(--primary) !important;
+    transition: color 0.3s ease;
+}
+
+/* Garante que o ícone do tema seja sempre visível */
+#theme-toggle i {
+    color: var(--primary) !important;
+    transition: color 0.3s ease;
+}

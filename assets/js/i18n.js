@@ -189,5 +189,5 @@ const translations = {
         'services_subtitle': 'Услуги',
         'services_title': 'Что я делаю',
         'services_desc': 'Сосредоточен на back-end разработке, микросервисах и веб-при'
-
+    },}
     

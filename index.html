@@ -8,7 +8,7 @@
     <meta name="author" content="Renan Monteiro">
     <link rel="icon" type="image/png" href="assets/imgs/thumb.png">
 
-    <title>Renan Monteiro</title>
+    <title data-key="site_title">Renan Monteiro</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
@@ -51,10 +51,11 @@
                         <div class="dropdown-menu" aria-labelledby="languageDropdown">
                             <a class="dropdown-item" href="#" onclick="changeLanguage('pt-br')">Português (BR)</a>
                             <a class="dropdown-item" href="#" onclick="changeLanguage('en')">English (US)</a>
+                            <a class="dropdown-item" href="#" onclick="changeLanguage('ru')">Русский (RU)</a>
                         </div>
                     </li>
                     <li class="nav-item">
-    <a href="#" class="nav-link two-colors-btn" id="theme-toggle">
+    <a href="#" class="nav-link" id="theme-toggle" title="Alternar Tema">
         <i class="ti-moon"></i>
     </a>
 </li>
@@ -86,7 +87,7 @@
                 </div>
             </div>
             <div class="img-holder">
-                <img src="assets/imgs/avatarsemfundo.png" alt="">
+             <!---->   <img src="assets/imgs/avatarsemfundo.png" alt="">
             </div>
         </div>
 
@@ -118,11 +119,11 @@
                 <div class="pl-md-4 col-md-9">
                     <h6 class="title" data-key="about_title">Prazer, Renan Monteiro</h6>
                     <p class="subtitle" data-key="about_subtitle">Desenvolvedor de software</p>
-                    <p data-key="about_p1">Sou apaixonado por tecnologia e por tudo o que envolve construção de soluções inteligentes. Desde muito jovem tive contato com computadores e, ao longo dos anos, transformei essa curiosidade em profissão.</p>
-                    <p data-key="about_p2">Sou formado em Ciências da Computação pela UNIFG e possuo pós-graduação em Teste e Qualidade de Software pela UNINASSAU, concluída em 2019. Minha trajetória acadêmica e profissional me proporcionou experiência em análise, desenvolvimento, testes e manutenção de sistemas, sempre buscando criar aplicações estáveis, eficientes e de fácil uso.</p>
-                    <p data-key="about_p3">Ao longo da carreira, trabalhei com diversas ferramentas, tecnologias e metodologias, o que me fez desenvolver uma visão ampla sobre o ciclo de vida de software e sobre as boas práticas de desenvolvimento. Gosto de aprender continuamente e estou sempre explorando novas soluções, frameworks, linguagens e tendências do mercado.</p>
-                    <p data-key="about_p3">Este site foi criado com finalidade educacional, como parte do meu processo de estudo e aprimoramento. Aqui compartilho meu primeiro portfólio pessoal, hospedado no GitHub Pages, onde também pretendo divulgar projetos, experimentos, códigos e conteúdos relacionados ao universo da programação.</p>
-                    <p data-key="about_p3">Fique à vontade para navegar, conhecer meu trabalho e acompanhar minha evolução.</p>
+                    <p data-key="about_p1"></p>
+                    <p data-key="about_p2"></p>
+                    <p data-key="about_p3"></p>
+                    <p data-key="about_p4"></p>
+                    <p data-key="about_p5"></p>
                 </div>
             </div>
         </div>
@@ -138,7 +139,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
-                        <div class="card-body">
+                        <div class="card-body" data-key="services_api">
                             <i class="icon ti-target"></i>
                             <h5>API</h5>
                         </div>
@@ -146,7 +147,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
-                        <div class="card-body">
+                        <div class="card-body" data-key="services_microservices">
                             <i class="icon ti-desktop"></i>
                             <h5>Micro Serviços</h5>
                         </div>
@@ -154,7 +155,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
-                        <div class="card-body">
+                        <div class="card-body" data-key="services_webapps">
                             <i class="icon ti-mobile"></i>
                             <h5>Aplicações Web</h5>
                         </div>
@@ -162,7 +163,7 @@
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
                     <div class="custom-card card border">
-                        <div class="card-body">
+                        <div class="card-body" data-key="services_database">
                             <i class="icon ti-save"></i>
                             <h5>Banco de Dados</h5>
                         </div>
@@ -255,7 +256,7 @@
     <!-- Testimonial Section -->
     <section id="testmonial" class="section">
         <div class="container text-center">
-            <h6 class="subtitle" data-key="testimonials_subtitle">Depoimentos</h6>
+            <h6 class="subtitle" data-key="testimonials_subtitle"></h6>
             <h6 class="section-title mb-4" data-key="testimonials_title">O que meus clientes dizem</h6>
             <p class="mb-5 pb-4" data-key="testimonials_desc">Confira o feedback de alguns dos meus clientes e admiradores.</p>
 
@@ -298,7 +299,7 @@
             <h6 class="section-title mb-4" data-key="contact_title">Fale Comigo Agora</h6>
 
             <div class="contact text-left">
-                <div class="form">
+                <div class="form" data-key="contact_form_section">
                     <h6 class="subtitle" data-key="contact_form_subtitle">Disponível 24/7</h6>
                     <h6 class="section-title mb-4" data-key="contact_form_title">Mande uma mensagem</h6>
                     <form id="meuForm">
@@ -318,21 +319,21 @@
                     <div class="item">
                         <i class="ti-location-pin"></i>
                         <div class="">
-                            <h5 data-key="contact_info_location">Localização</h5>
+                            <h5 data-key="contact_info_location"></h5>
                             <p data-key="contact_info_address"> Rua i, Barra de Jangada, Jaboatão dos Guararapes</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="ti-mobile"></i>
                         <div>
-                            <h5 data-key="contact_info_phone">Telefone</h5>
+                            <h5 data-key="contact_info_phone"></h5>
                             <p>(81) 99623-0817</p>
                         </div>
                     </div>
                     <div class="item">
                         <i class="ti-email"></i>
                         <div class="mb-0">
-                            <h5 data-key="contact_info_email">Email </h5>
+                            <h5 data-key="contact_info_email"></h5>
                             <p>renan.monteiro01@outlook.com</p>
                         </div>
                     </div>
@@ -359,7 +360,7 @@
                 <div class="modal-body">
                     <img id="modal-project-image" src="" alt="Project Image" class="img-fluid mb-3">
                     <p id="modal-project-description"></p>
-                    <p><strong>Tecnologias:</strong> <span id="modal-project-tech"></span></p>
+                    <p><strong data-key="modal_technologies">Tecnologias:</strong> <span id="modal-project-tech"></span></p>
                     <div class="modal-links mt-3">
                         <a id="modal-project-demo" href="#" target="_blank" class="btn btn-primary mr-2">Ver Demo</a>
                         <a id="modal-project-code" href="#" target="_blank" class="btn btn-secondary">Ver Código</a>

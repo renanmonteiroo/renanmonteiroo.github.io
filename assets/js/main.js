@@ -45,54 +45,165 @@ const projects = [
 //================================================
 const testimonials = [
     {
-        text_key: 'Ooora porra!!!',
-        author_key: 'Guilherme Calvo',
-        role_key: 'Hater',
-        image: 'assets/imgs/guilherme.jpg' // Substitua por imagens reais
+        text_key: 'testimonial_1_text',
+        author_key: 'testimonial_1_author',
+        role_key: 'testimonial_1_role',
+        image: 'assets/imgs/avatar-1.jpg'
     },
     {
-        text_key: 'Olha o braço dele!',
-        author_key: 'Garotinho autista',
-        role_key: 'Admirador ',
-        image: 'assets/imgs/washington.jpg'
+        text_key: 'testimonial_2_text',
+        author_key: 'testimonial_2_author',
+        role_key: 'testimonial_2_role',
+        image: 'assets/imgs/avatar-2.jpg'
     },
     {
-        text_key: 'Muito racista, me trata mal pessoas negras!',
-        author_key: 'Não identificado',
-        role_key: 'Cliente não binário',
-        image: 'assets/imgs/lucas.jpg'
+        text_key: 'testimonial_3_text',
+        author_key: 'testimonial_3_author',
+        role_key: 'testimonial_3_role',
+        image: 'assets/imgs/avatar-3.jpg'
     }
 ];
 
 //================================================
+// TRADUÇÕES (CONSOLIDADO AQUI)
+//================================================
+const allTranslations = {
+    'pt-br': {
+        // Título do site
+        'site_title': 'Renan Monteiro',
+        
+        // Navegação
+        'nav_home': 'Home',
+        'nav_about': 'Sobre',
+        'nav_services': 'Serviços',
+        'nav_portfolio': 'Portfólio',
+        'nav_contact': 'Contato',
+        
+        // Idiomas
+        'language_portuguese': 'Português (BR)',
+        'language_english': 'English (US)',
+        'language_russian': 'Русский (RU)',
+        
+        // Header
+        'header_greeting': 'Prazer, sou',
+        'header_contact_btn': 'ENTRE EM CONTATO!',
+        'typing_effect_items': 'Desenvolvedor Back-end Java,Especialista em Microserviços,Apaixonado por Código Limpo',
+        
+        // Sobre
+        'about_title': 'Prazer, Renan Monteiro',
+        'about_subtitle': 'Desenvolvedor de software',
+        'about_p1': 'Sou apaixonado por tecnologia e por tudo o que envolve construção de soluções inteligentes. Desde muito jovem tive contato com computadores e, ao longo dos anos, transformei essa curiosidade em profissão.',
+        'about_p2': 'Sou formado em Ciências da Computação pela UNIFG e possuo pós-graduação em Teste e Qualidade de Software pela UNINASSAU, concluída em 2019. Minha trajetória acadêmica e profissional me proporcionou experiência em análise, desenvolvimento, testes e manutenção de sistemas, sempre buscando criar aplicações estáveis, eficientes e de fácil uso.',
+        'about_p3': 'Ao longo da carreira, trabalhei com diversas ferramentas, tecnologias e metodologias, o que me fez desenvolver uma visão ampla sobre o ciclo de vida de software e sobre as boas práticas de desenvolvimento. Gosto de aprender continuamente e estou sempre explorando novas soluções, frameworks, linguagens e tendências do mercado.',
+        'about_p4': 'Este site foi criado com finalidade educacional, como parte do meu processo de estudo e aprimoramento. Aqui compartilho meu primeiro portfólio pessoal, hospedado no GitHub Pages, onde também pretendo divulgar projetos, experimentos, códigos e conteúdos relacionados ao universo da programação.',
+        'about_p5': 'Fique à vontade para navegar, conhecer meu trabalho e acompanhar minha evolução.',
+        
+        // Serviços
+        'services_subtitle': 'Serviços',
+        'services_title': 'O que eu faço',
+        'services_desc': 'Foco em desenvolvimento back-end, microserviços e aplicações web.<br>3 anos de experiência utilizando as tecnologias Java, Spring Boot, JSP, JSF <br>Banco de dados MySql, Postgresql, Oracle',
+        'services_api': 'API',
+        'services_microservices': 'Micro Serviços',
+        'services_webapps': 'Aplicações Web',
+        'services_database': 'Banco de Dados',
+        
+        // Skills
+        'skills_subtitle': 'Skills',
+        'skills_title': 'Por que me contratar?',
+        'skills_agile': 'Metodologia Ágeis',
+        'skills_db': 'Banco de dados',
+        'skills_pm': 'Gerenciamento de Projetos',
+        
+        // Portfólio
+        'portfolio_subtitle': 'Portfólio',
+        'portfolio_title': 'Veja Meus Projetos',
+        'portfolio_desc': 'Aqui estão alguns dos projetos em que trabalhei, demonstrando minhas habilidades em diferentes tecnologias.',
+        'portfolio_filter_all': 'Todos',
+        'portfolio_filter_backend': 'Back-end',
+        'portfolio_filter_frontend': 'Front-end',
+        
+        // Depoimentos
+        'testimonials_subtitle': 'Depoimentos',
+        'testimonials_title': 'O que meus clientes dizem',
+        'testimonials_desc': 'Confira o feedback de alguns dos meus clientes e admiradores.',
+        'testimonial_1_text': 'Renan é um desenvolvedor excepcional, sempre entregando soluções de alta qualidade e superando as expectativas. Recomendo fortemente!',
+        'testimonial_1_author': 'Ana Silva',
+        'testimonial_1_role': 'Gerente de Projetos',
+        'testimonial_2_text': 'Trabalhar com Renan foi uma experiência fantástica. Sua expertise em Java e Spring Boot é impressionante e ele é um ótimo comunicador.',
+        'testimonial_2_author': 'Carlos Oliveira',
+        'testimonial_2_role': 'CTO',
+        'testimonial_3_text': 'A atenção aos detalhes e a capacidade de resolver problemas complexos de Renan são inigualáveis. Um profissional de primeira linha!',
+        'testimonial_3_author': 'Mariana Costa',
+        'testimonial_3_role': 'Desenvolvedora Sênior',
+        
+        // Contrate-me
+        'hire_me_title': 'Compartilhe comigo seu projeto incrível',
+        'hire_me_btn': 'Fale Comigo!',
+        
+        // Contato
+        'contact_subtitle': 'Contato',
+        'contact_title': 'Fale Comigo Agora',
+        'contact_form_subtitle': 'Disponível 24/7',
+        'contact_form_title': 'Mande uma mensagem',
+        'contact_form_name_placeholder': 'Seu nome',
+        'contact_form_message_placeholder': 'Mensagem',
+        'contact_form_send_btn': 'Enviar Mensagem',
+        'contact_info_location': 'Localização',
+        'contact_info_address': 'Rua i, Barra de Jangada, Jaboatão dos Guararapes',
+        'contact_info_phone': 'Telefone',
+        'contact_info_email': 'Email',
+        
+        // Modal de Projeto
+        'modal_view_demo': 'Ver Demo',
+        'modal_view_code': 'Ver Código',
+        'modal_close': 'Fechar',
+        'modal_technologies': 'Tecnologias:',
+
+        // Footer
+        'footer_copyright': 'Copyright'
+    },
+    // ... (restante das traduções para 'en' e 'ru' serão adicionadas aqui)
+};
+
+let currentTranslations = {}; // Variável para armazenar as traduções do idioma atual
+
+//================================================
 // INTERNACIONALIZAÇÃO (i18n)
 //================================================
-let translations = {};
 
 async function loadTranslations(lang) {
     try {
-        const response = await fetch(`assets/lang/${lang}.json`);
-        if (!response.ok) {
-            throw new Error(`Could not load ${lang}.json`);
+        currentTranslations = allTranslations[lang];
+        if (!currentTranslations) {
+            console.warn(`Translations for '${lang}' not found, falling back to 'pt-br'.`);
+            currentTranslations = allTranslations['pt-br']; // Fallback para o idioma padrão
         }
-        translations = await response.json();
-        applyTranslations();
+        applyTranslations(); // Aplica as traduções após carregar
     } catch (error) {
         console.error('Failed to load translations:', error);
     }
 }
 
 function applyTranslations() {
+    // Atualiza o título da página
+    const siteTitleElement = document.querySelector('title[data-key="site_title"]');
+    if (siteTitleElement) {
+        siteTitleElement.textContent = currentTranslations['site_title'] || 'Renan Monteiro';
+    }
+
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        if (translations[key]) {
+        if (currentTranslations[key]) {
             if (element.hasAttribute('data-placeholder-key')) {
-                element.placeholder = translations[key];
+                element.placeholder = currentTranslations[key];
             } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') { // Para inputs que não são placeholders mas tem data-key
-                element.value = translations[key];
+                // Apenas atualiza o placeholder se existir
+                if (element.placeholder) {
+                    element.placeholder = currentTranslations[key];
+                }
             }
             else {
-                element.innerHTML = translations[key];
+                element.innerHTML = currentTranslations[key];
             }
         }
     });
@@ -103,18 +214,25 @@ function applyTranslations() {
     
     // Re-renderiza o portfólio e depoimentos com o novo idioma
     renderTestimonials(); // Renderiza depoimentos com o novo idioma
-    setupTypingEffect();
+    setupTypingEffect(); // Re-inicializa o efeito de digitação com o novo idioma
     renderProjects(currentFilter);
     
     // Atualiza os textos dos botões do modal
     if (document.getElementById('modal-project-demo')) {
-        document.getElementById('modal-project-demo').textContent = translations['modal_view_demo'] || 'Ver Demo';
+        document.getElementById('modal-project-demo').textContent = currentTranslations['modal_view_demo'] || 'Ver Demo';
     }
     if (document.getElementById('modal-project-code')) {
-        document.getElementById('modal-project-code').textContent = translations['modal_view_code'] || 'Ver Código';
+        document.getElementById('modal-project-code').textContent = currentTranslations['modal_view_code'] || 'Ver Código';
     }
-    if (document.querySelector('#projectDetailModal .modal-footer button')) {
-        document.querySelector('#projectDetailModal .modal-footer button').textContent = translations['modal_close'] || 'Fechar';
+    if (document.getElementById('modal-project-tech')) { // Verifica se o elemento existe antes de tentar acessar previousElementSibling
+        const techLabel = document.getElementById('modal-project-tech').previousElementSibling;
+        if (techLabel) {
+            techLabel.textContent = currentTranslations['modal_technologies'] || 'Tecnologias:';
+        }
+        const closeButton = document.querySelector('#projectDetailModal .modal-footer button');
+        if (closeButton) {
+            closeButton.textContent = currentTranslations['modal_close'] || 'Fechar';
+        }
     }
 }
 
@@ -135,7 +253,7 @@ function setupTypingEffect() {
     if (!typingEffectElement) return;
 
     const itemsKey = 'typing_effect_items';
-    const items = translations[itemsKey] ? translations[itemsKey].split(',') : [];
+    const items = currentTranslations[itemsKey] ? currentTranslations[itemsKey].split(',') : [];
     let itemIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -287,8 +405,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         <img src="${project.image}" alt="${project.title}">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>${translations[project.title_key] || project.title_key}</h5>
-                                <p>${translations[project.description_key] || project.description_key}</p>
+                                <h5>${currentTranslations[project.title_key]}</h5>
+                                <p>${currentTranslations[project.description_key]}</p>
                                 <a href="${project.demoUrl}" target="_blank" title="Ver Demo"><i class="ti-link"></i></a>
                                 <a href="${project.codeUrl}" target="_blank" title="Ver Código"><i class="ti-github"></i></a>
                             </div>
@@ -322,25 +440,25 @@ document.addEventListener('DOMContentLoaded', function () {
         projectDetailModal.addEventListener('show.bs.modal', function (event) {
             const button = event.relatedTarget; // Botão que acionou o modal
             const projectId = button.getAttribute('data-project-id'); // Usar o title_key como ID
-            const project = projects.find(p => p.title_key.replace(/_/g, '-') === projectId);
+            const project = projects.find(p => p.title_key === projectId);
 
             if (project) {
-                this.querySelector('.modal-title').textContent = translations[project.title_key] || project.title_key;
+                this.querySelector('.modal-title').textContent = currentTranslations[project.title_key] || project.title_key;
                 this.querySelector('#modal-project-image').src = project.image;
-                this.querySelector('#modal-project-description').innerHTML = translations[project.description_key] || project.description_key;
-                this.querySelector('#modal-project-tech').textContent = translations[project.tech_key] || project.tech_key;
+                this.querySelector('#modal-project-description').innerHTML = currentTranslations[project.description_key];
+                this.querySelector('#modal-project-tech').textContent = currentTranslations[project.tech_key];
                 
                 const demoLink = this.querySelector('#modal-project-demo');
                 demoLink.href = project.demoUrl;
-                demoLink.textContent = translations['modal_view_demo'] || 'Ver Demo';
+                demoLink.textContent = currentTranslations['modal_view_demo'];
                 demoLink.style.display = project.demoUrl && project.demoUrl !== '#' ? 'inline-block' : 'none';
 
                 const codeLink = this.querySelector('#modal-project-code');
                 codeLink.href = project.codeUrl;
-                codeLink.textContent = translations['modal_view_code'] || 'Ver Código';
+                codeLink.textContent = currentTranslations['modal_view_code'];
                 codeLink.style.display = project.codeUrl && project.codeUrl !== '#' ? 'inline-block' : 'none';
 
-                this.querySelector('.modal-footer button').textContent = translations['modal_close'] || 'Fechar';
+                this.querySelector('.modal-footer button').textContent = currentTranslations['modal_close'];
             }
         });
     }
@@ -367,10 +485,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="carousel-item ${index === 0 ? 'active' : ''}">
                     <div class="card testmonial-card border">
                         <div class="card-body">
-                            <img src="${testimonial.image}" alt="${translations[testimonial.author_key] || testimonial.author_key}">
-                            <p>${translations[testimonial.text_key] || testimonial.text_key}</p>
-                            <h1 class="title">${translations[testimonial.author_key] || testimonial.author_key}</h1>
-                            <h1 class="subtitle">${translations[testimonial.role_key] || testimonial.role_key}</h1>
+                            <img src="${testimonial.image}" alt="${currentTranslations[testimonial.author_key]}">
+                            <p>"${currentTranslations[testimonial.text_key]}"</p>
+                            <h1 class="title">${currentTranslations[testimonial.author_key]}</h1>
+                            <h1 class="subtitle">${currentTranslations[testimonial.role_key]}</h1>
                         </div>
                     </div>
                 </div>
@@ -402,7 +520,6 @@ document.addEventListener('DOMContentLoaded', function () {
     //================================================
     const initialLang = localStorage.getItem('language') || 'pt-br';
     changeLanguage(initialLang);
-    renderTestimonials(); // Renderiza depoimentos na inicialização
     const savedTheme = localStorage.getItem('theme') || 'light'; // 'light' como padrão
     applyTheme(savedTheme);
     observeElements();
